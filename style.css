@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(26, 0, 0);
+}
+
+header {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 0.1px rgba(255, 255, 255, 0.322);
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+}
+
+.logo span {
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.awal {
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(255, 0, 0, 0.1)), url(https://tanogaido.com/wp-content/uploads/2023/08/Torii-Gate-Ikonik-di-Jepang.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.judul h1 {
+    color: white;
+    padding-left: 140px;
+    font-weight: 900;
+    font-size: 120px;
+    margin: 0;
+    /* font-family: sans-serif; */
+    text-shadow: 2px 2px 2px rgb(54, 0, 0);
+}
+
+.btn {
+    padding-right: 170px;
+}
+
+.btn a img {
+    width: 80px;
+    background: linear-gradient(0deg, rgba(92, 0, 0, 0.452), rgba(131, 0, 0, 0.575));
+    padding: 24px 24px;
+    text-decoration: none;
+    border-radius: 100px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: -2px 2px 2px rgb(54, 0, 0);
+}
+
+.btn a img:hover {
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .judul h1 {
+        font-size: 50px;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.hero {
+    color: white;
+    background: black;
+    min-height: 100vh;
+    padding: 130px 0;
+}
+
+.inti h1 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.inti p {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.container-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container-card {
+    width: 250px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.container-card:before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.card p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.container-card:hover {
+  transform: translateY(-10px);
+}
+
+.daftar {
+    background: linear-gradient(0deg, rgba(0, 132, 255, 0.1), black), 
+                url(https://space.blog.gov.uk/wp-content/uploads/sites/129/2023/11/Autumn_east-min.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.informasi {
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container-form {
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.container-form h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, 
+form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.daftar form button {
+    background-color: rgb(19, 173, 140);
+    color: white;
+}
+
+.btn-klik {
+    padding: 12px 30px;
+    background-color: white;
+    color: #1e3a8a;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-klik:hover {
+    background-color: #1e293b;
+    color: white;
+}
+
+.btn-klik a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: #000f27;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer h1 {
+    color: white;
+    font-size: 14px;
+}
+
+
